@@ -1,0 +1,279 @@
+import React from 'react'
+import styles from '../styles/About.module.css'
+
+
+class About extends React.Component {
+    render() {
+        return (
+     
+
+
+
+        
+<div class="form-center">
+<div className="row">
+    <div className="col-md-7 mrgnbtm">
+    <h2>Contact Form</h2>
+    <form>
+        {/* <div className="row">
+            <div className="form-group col-md-6">
+                <label htmlFor="exampleInputEmail1">First Name<br></br></label>
+                <input type="text" onChange={(e) => onChangeForm(e)}  className="form-control" name="firstname" id="firstname" aria-describedby="emailHelp" placeholder="First Name" />
+            </div>
+            <div className="form-group col-md-6">
+                <label htmlFor="exampleInputPassword1">Last Name</label>
+                <input type="text" onChange={(e) => onChangeForm(e)} className="form-control" name="lastname" id="lastname" placeholder="Last Name" />
+            </div>
+        </div>
+        <div className="row">
+            <div className="form-group col-md-12">
+                <label htmlFor="exampleInputEmail1">Email</label>
+                <input type="text" onChange={(e) => onChangeForm(e)} className="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email" />
+            </div>
+        </div>
+        <div className="row">
+            <div className="form-group col-md-12">
+                <label htmlFor="exampleInputEmail1">Email</label>
+                <input type="text" onChange={(e) => onChangeForm(e)} className="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email" />
+               
+            </div>
+        </div> */}
+        <div>
+        <label>
+First Name
+<input   type="text" name="name" placeholder="Your First Name"  />
+</label>
+</div>
+<br />
+
+<div>
+<label>
+Last Name
+<input type="text" name="name"  placeholder="Your Last Name" />
+</label>
+</div>
+<br/>
+<label>
+
+{/* <ButtonGroup className="mb-2">
+<ToggleButton
+id="toggle-check"
+type="checkbox"
+variant="secondary"
+checked={checked}
+value="1"
+onChange={(e) => setChecked(e.currentTarget.checked)}
+>
+Checked
+</ToggleButton>
+</ButtonGroup> */}
+<div>
+Gender
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+<label class="btn btn-primary active">
+<input type="radio" name="options" id="option1" autocomplete="off" checked/> Neither
+</label>
+<label class="btn btn-primary">
+<input type="radio" name="options" id="option2" autocomplete="off"/> Male
+</label>
+<label class="btn btn-primary">
+<input type="radio" name="options" id="option3" autocomplete="off"/> Female
+</label>
+</div>    
+</div>
+<br/>
+</label>
+<div>
+<label>
+Your Birthdate
+<input type="date" id="start" name="dateofbirth"
+value="2021-11-15"
+min="1900-01-01" max="2022-12-31" />
+</label>
+</div>
+<br/>
+<div>
+<label>
+Mobile Number
+<input type="text" placeholder="(___) ___ ____" /><br/>
+</label>
+</div>
+<br/>
+<div>
+<label>
+Email
+<input type="text" name="name" placeholder="Your email id"  />
+</label>
+</div>
+<br/>
+<div>
+<label>
+Shoot
+<div class="row g-3">
+<div class="col">
+<button type="button" class="btn btn-primary">Left</button>
+</div>
+<div class="col">
+<button type="button" class="btn btn-secondary">Right</button>
+</div>
+</div>
+</label>
+</div>
+<br/>
+<div>
+<label>
+Jersey Number
+<input type="text" name="name" placeholder="Your Jersey Number" />
+</label>
+</div>
+<br/>
+Height
+<div class="row g-3">
+<div class="col">
+<input type="text" class="form-control" placeholder="Feet " aria-label="Feet"/>
+</div>
+<div class="col">
+<input type="text" class="form-control" placeholder="Inches" aria-label="Inches" />
+</div>
+</div>
+<br/>
+Weight (lbs)
+<div class="row g-3">
+<div class="col">
+<input type="text" class="form-control" placeholder="lbs " aria-label="lbs" />
+</div>
+<button type="button" onClick= {(e) => nextPage()} className="btn btn-danger">Continue</button>
+</div>
+
+<br></br>
+       { /*<button type="button" onClick= {(e) => createUser()} className="btn btn-danger">Submit</button> */}
+        <button type="button" onClick={(e) => this.handleSubmit()} className="btn btn-danger">Submit</button>
+{/*                     
+<div>
+<label for="exampleInputName">First Name</label>
+<input type="text"
+name="firstname"
+placeholder="name"
+// onChange={this.handleChange}
+/><br></br>
+</div>
+
+<div>
+<label for="exampleInputName">Last Name</label>
+<input type="text"
+name="lastname"
+placeholder="name"
+// onChange={this.handleChange}
+/>
+</div>
+
+<div>
+<label for="exampleInputName">Gender</label>
+<input type="text"
+name="gender"
+placeholder="Neither Female Male"
+// onChange={this.handleChange}
+/>
+
+</div>
+
+<input type="radio" name="gender" value="male"> Male<br></br></input>
+<input type="radio" name="gender" value="female"> Female<br></br></input>
+<input type="radio" name="gender" value="other"> Neither<br></br></input>
+<div>
+<label for="exampleInputName">Your Birthdate</label>
+<input type="number"
+name="birthdate"
+placeholder="Select Your Birthdate"
+// onChange={this.handleChange}
+/>
+</div>
+<label for="birthday">Birthday:</label>
+<input type="datepicker" id="birthday" name="birthday"><br></br></input>
+<input type="datetime-local"><br></br></input>
+
+<div>
+<label for="exampleInputName">Mobile Number</label>
+<input type="number"
+name="mobileno"
+pplaceholder="(__) ___ ___"
+// onChange={this.handleChange}
+/>
+</div>
+ 
+<div>
+<label for="exampleInputName">Email</label>
+<input type="email"
+name="email"
+placeholder="Your Email id"
+// onChange={this.handleChange}
+/>
+</div>
+
+<div>
+<label for="exampleInputName">Shoot</label>
+<input type="text"
+name="shoot"
+placeholder="Left    |    Right"
+// onChange={this.handleChange}
+/>
+<select
+            className="form-control"
+            id="exampleFormControlSelect1"
+            required
+            //name="platform"
+           // value={query.platform}
+           //onChange={handleChange()}
+        >
+            <option>Right</option>
+            <option>Left</option>
+            
+        </select>
+</div>
+
+<div>
+<label for="exampleInputName">Jersey Number</label>
+<input type="number"
+name="jnumber"
+placeholder="Your Jersey Number"
+// onChange={this.handleChange}
+/>
+</div>
+
+<div>
+<label for="exampleInputName">Height</label>
+<input type="number"
+name="height"
+placeholder="Feet Inches"
+// onChange={this.handleChange}
+/>
+</div>
+
+<div>
+<label for="exampleInputName">Weight(lbs)</label>
+<input type="number"
+name="weight"
+placeholder="lbs              Continue"
+// onChange={this.handleChange}
+/>
+</div>
+
+
+
+*/}
+
+    </form>
+    </div>
+</div>
+</div>
+)
+}
+//}
+
+}
+
+export default About;
+
+
+
+
